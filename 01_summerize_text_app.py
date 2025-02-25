@@ -13,7 +13,7 @@ def askGpt(prompt, api_key):
         client = OpenAI(api_key=api_key)  # API 키를 입력받은 후 클라이언트 생성
         messages_prompt = [{"role": "system", "content": prompt}]
         response = client.chat.completions.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4o",
             messages=messages_prompt
         )
         return response.choices[0].message.content  # 응답 메시지 반환
